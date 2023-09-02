@@ -13,19 +13,21 @@
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <meta name="robots" content="index, follow" />
-    <link rel="stylesheet" href="" />
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   </head>
   <body>
-    <div id="word">word:{{message}}</div>
+    <div id="app">
+      {{ greeting }}
+    </div>
     <script>
-      const word = {
-        data() {
+      let app = Vue.createApp({
+        data: function() {
           return {
-            message: "Hello!",
-          };
-        },
-      };
+            greeting: 'Hello world!!!'
+          }
+        }
+      })
+      app.mount('#app')
     </script>
   </body>
 </html>
